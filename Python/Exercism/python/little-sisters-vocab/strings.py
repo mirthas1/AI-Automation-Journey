@@ -1,4 +1,5 @@
 """Functions for creating, transforming, and adding prefixes to strings."""
+import string
 
 
 def add_prefix_un(word):
@@ -10,8 +11,7 @@ def add_prefix_un(word):
     Returns:
         str: Root word prepended with 'un'.
     """
-
-    pass
+    return f"un{word}"
 
 
 def make_word_groups(vocab_words):
@@ -21,18 +21,15 @@ def make_word_groups(vocab_words):
         vocab_words (list[str]): Vocabulary words with prefix at first index.
 
     Returns:
-        str: Prefix followed by vocabulary words with prefix applied.
-
-    This function takes a `vocab_words` list of strings and returns a string
-    with the prefix and the words with prefix applied, separated by ' :: '.
+        str: Prefix followed by vocabulary words with prefix applied,
+        separated by ' :: '.
 
     Examples:
-        >>> list('en', 'close', 'joy', 'lighten')
-        'en :: enclose :: enjoy :: enlighten'.
-
+        >>> make_word_groups(['en', 'close', 'joy', 'lighten'])
+        'en :: enclose :: enjoy :: enlighten'
     """
-
-    pass
+    prefix = vocab_words[0]
+    return " :: ".join([prefix] + [prefix + word for word in vocab_words[1:]])
 
 
 def remove_suffix_ness(word):
@@ -50,10 +47,12 @@ def remove_suffix_ness(word):
 
         >>> remove_suffix_ness('sadness')
         'sad'
-
     """
-
-    pass
+    if word.endswith("iness"):
+        return word[:-5] + "y"
+    if word.endswith("ness"):
+        return word[:-4]
+    return word
 
 
 def adjective_to_verb(sentence, index):
@@ -72,7 +71,7 @@ def adjective_to_verb(sentence, index):
 
         >>> adjective_to_verb('The ink stains her fingers black.', -1)
         'blacken'
-
     """
-
-    pass
+    word = sentence.split()[index]
+    word = word.strip(string.punctuation)
+    return f"{word}en"
