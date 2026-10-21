@@ -1,0 +1,534 @@
+Here's an important suggestion on how to improve your code…
+There are a few changes we'd like you to make before completing this exercise.
+Essential
+Line 66 [W0311 bad-indentation] was reported by Pylint:
+
+Bad indentation. Found 12 spaces, expected 8.
+
+There is an issue in the code that could lead to a bug or error in the program. While this error might not be severe, it could lead to more severe issues in the future. It is recommended the problem be addressed before proceeding further.
+
+Instead of:
+
+if input():
+   print('yes')  # [bad-indentation]
+Try:
+
+if input():
+    print("yes")
+The option --indent-string can be used to set the indentation unit for this check.
+
+Essential
+Line 9 [W1405 inconsistent-quotes] was reported by Pylint:
+
+Quote delimiter ' is inconsistent with the rest of the file.
+
+There is an issue in the code that could lead to a bug or error in the program. While this error might not be severe, it could lead to more severe issues in the future. It is recommended the problem be addressed before proceeding further.
+
+Instead of:
+
+import datetime
+
+print('Current year: ', datetime.date.today().strftime("%Y")) # [inconsistent-quotes]
+Try:
+
+import datetime
+
+print("Current year: ", datetime.date.today().strftime("%Y"))
+Essential
+Line 11 [W1405 inconsistent-quotes] was reported by Pylint:
+
+Quote delimiter ' is inconsistent with the rest of the file.
+
+There is an issue in the code that could lead to a bug or error in the program. While this error might not be severe, it could lead to more severe issues in the future. It is recommended the problem be addressed before proceeding further.
+
+Instead of:
+
+import datetime
+
+print('Current year: ', datetime.date.today().strftime("%Y")) # [inconsistent-quotes]
+Try:
+
+import datetime
+
+print("Current year: ", datetime.date.today().strftime("%Y"))
+Essential
+Line 17 [W1405 inconsistent-quotes] was reported by Pylint:
+
+Quote delimiter ' is inconsistent with the rest of the file.
+
+There is an issue in the code that could lead to a bug or error in the program. While this error might not be severe, it could lead to more severe issues in the future. It is recommended the problem be addressed before proceeding further.
+
+Instead of:
+
+import datetime
+
+print('Current year: ', datetime.date.today().strftime("%Y")) # [inconsistent-quotes]
+Try:
+
+import datetime
+
+print("Current year: ", datetime.date.today().strftime("%Y"))
+Essential
+Line 18 [W1405 inconsistent-quotes] was reported by Pylint:
+
+Quote delimiter ' is inconsistent with the rest of the file.
+
+There is an issue in the code that could lead to a bug or error in the program. While this error might not be severe, it could lead to more severe issues in the future. It is recommended the problem be addressed before proceeding further.
+
+Instead of:
+
+import datetime
+
+print('Current year: ', datetime.date.today().strftime("%Y")) # [inconsistent-quotes]
+Try:
+
+import datetime
+
+print("Current year: ", datetime.date.today().strftime("%Y"))
+Essential
+Line 65 [W1405 inconsistent-quotes] was reported by Pylint:
+
+Quote delimiter ' is inconsistent with the rest of the file.
+
+There is an issue in the code that could lead to a bug or error in the program. While this error might not be severe, it could lead to more severe issues in the future. It is recommended the problem be addressed before proceeding further.
+
+Instead of:
+
+import datetime
+
+print('Current year: ', datetime.date.today().strftime("%Y")) # [inconsistent-quotes]
+Try:
+
+import datetime
+
+print("Current year: ", datetime.date.today().strftime("%Y"))
+Recommended
+Line 39 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 46 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 46 [R0123 literal-comparison] was reported by Pylint:
+
+In 'card_two is 'A'', use '==' when comparing constant literals not 'is' ('card_two == 'A'').
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def is_an_orange(fruit):
+    return fruit is "orange"  # [literal-comparison]
+Try:
+
+def is_an_orange(fruit):
+    return fruit == "orange"
+Comparison operations in Python
+Recommended
+Line 50 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 50 [R0123 literal-comparison] was reported by Pylint:
+
+In 'card_one is 'A'', use '==' when comparing constant literals not 'is' ('card_one == 'A'').
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def is_an_orange(fruit):
+    return fruit is "orange"  # [literal-comparison]
+Try:
+
+def is_an_orange(fruit):
+    return fruit == "orange"
+Comparison operations in Python
+Recommended
+Line 57 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 63 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 63 [R0123 literal-comparison] was reported by Pylint:
+
+In 'card_two is 'A'', use '==' when comparing constant literals not 'is' ('card_two == 'A'').
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def is_an_orange(fruit):
+    return fruit is "orange"  # [literal-comparison]
+Try:
+
+def is_an_orange(fruit):
+    return fruit == "orange"
+Comparison operations in Python
+Recommended
+Line 63 [R0123 literal-comparison] was reported by Pylint:
+
+In 'card_one is 'A'', use '==' when comparing constant literals not 'is' ('card_one == 'A'').
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def is_an_orange(fruit):
+    return fruit is "orange"  # [literal-comparison]
+Try:
+
+def is_an_orange(fruit):
+    return fruit == "orange"
+Comparison operations in Python
+Recommended
+Line 65 [R0123 literal-comparison] was reported by Pylint:
+
+In 'card_two is 'A'', use '==' when comparing constant literals not 'is' ('card_two == 'A'').
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def is_an_orange(fruit):
+    return fruit is "orange"  # [literal-comparison]
+Try:
+
+def is_an_orange(fruit):
+    return fruit == "orange"
+Comparison operations in Python
+Recommended
+Line 67 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 39 [R0123 literal-comparison] was reported by Pylint:
+
+In 'card_two is 'A'', use '==' when comparing constant literals not 'is' ('card_two == 'A'').
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def is_an_orange(fruit):
+    return fruit is "orange"  # [literal-comparison]
+Try:
+
+def is_an_orange(fruit):
+    return fruit == "orange"
+Comparison operations in Python
+Recommended
+Line 39 [R0123 literal-comparison] was reported by Pylint:
+
+In 'card_one is 'A'', use '==' when comparing constant literals not 'is' ('card_one == 'A'').
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def is_an_orange(fruit):
+    return fruit is "orange"  # [literal-comparison]
+Try:
+
+def is_an_orange(fruit):
+    return fruit == "orange"
+Comparison operations in Python
+Recommended
+Line 29 [R1705 no-else-return] was reported by Pylint:
+
+Unnecessary "elif" after "return", remove the leading "el" from "elif.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def compare_numbers(a: int, b: int) -> int:
+    if a == b:  # [no-else-return]
+        return 0
+    elif a < b:
+        return -1
+    else:
+        return 1
+Try:
+
+def compare_numbers(a: int, b: int) -> int:
+    if a == b:
+        return 0
+    if a < b:
+        return -1
+    return 1
+Unnecessary-else-statements
+Recommended
+Line 24 [R1705 no-else-return] was reported by Pylint:
+
+Unnecessary "elif" after "return", remove the leading "el" from "elif.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def compare_numbers(a: int, b: int) -> int:
+    if a == b:  # [no-else-return]
+        return 0
+    elif a < b:
+        return -1
+    else:
+        return 1
+Try:
+
+def compare_numbers(a: int, b: int) -> int:
+    if a == b:
+        return 0
+    if a < b:
+        return -1
+    return 1
+Unnecessary-else-statements
+Recommended
+Line 21 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 18 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 17 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 9 [R6201 use-set-for-membership] was reported by Pylint:
+
+Consider using set for membership test.
+
+This code is emitting a code smell, and may be in need of a re-write or refactor. This doesn't mean the code is incorrect or buggy in a technical sense, only that it appears to have one or more patterns that could lead to future bugs or maintenance issues. Consider taking a closer look at it.
+
+Instead of:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in ["cherry", "grapes"]  # [use-set-for-membership]
+Try:
+
+def fruit_is_dangerous_for_cat(fruit: str) -> bool:
+    """This list is only a silly example, don't make decision regarding your cat diet based on it."""
+    return fruit in {"cherry", "grapes"}
+Recommended
+Line 67 [C0325 superfluous-parens] was reported by Pylint:
+
+Unnecessary parens after 'if' keyword.
+
+This code doesn't follow general Python code style conventions. While this type of issue generally doesn't affect the way code executes, it can hurt readability or the performance of automated tools such as documentation generators or test runners.
+
+Instead of:
+
+# Example 1
+x = input()
+y = input()
+if (x == y):  # [superfluous-parens]
+    pass
+
+# Example 2
+i = 0
+exclude = []
+if (i - 0) in exclude:  # [superfluous-parens]
+    pass
+Try:
+
+# Example 1
+x = input()
+y = input()
+if x == y:
+    pass
+
+# Example 2
+i = 0
+exclude = []
+if i - 0 in exclude:
+    pass
+Line 45 [C0116 missing-function-docstring] was reported by Pylint:
+
+Missing function or method docstring.
+
+This code doesn't follow general Python code style conventions. While this type of issue generally doesn't affect the way code executes, it can hurt readability or the performance of automated tools such as documentation generators or test runners.
+
+Instead of:
+
+import sys
+
+
+def print_python_version():  # [missing-function-docstring]
+    print(sys.version)
+Try:
+
+import sys
+
+
+def print_python_version():
+    """Function printing python version."""
+    print(sys.version)
+Line 62 [C0116 missing-function-docstring] was reported by Pylint:
+
+Missing function or method docstring.
+
+This code doesn't follow general Python code style conventions. While this type of issue generally doesn't affect the way code executes, it can hurt readability or the performance of automated tools such as documentation generators or test runners.
+
+Instead of:
+
+import sys
+
+
+def print_python_version():  # [missing-function-docstring]
+    print(sys.version)
+Try:
+
+import sys
+
+
+def print_python_version():
+    """Function printing python version."""
+    print(sys.version)
+Line 16 [C0116 missing-function-docstring] was reported by Pylint:
+
+Missing function or method docstring.
+
+This code doesn't follow general Python code style conventions. While this type of issue generally doesn't affect the way code executes, it can hurt readability or the performance of automated tools such as documentation generators or test runners.
+
+Instead of:
+
+import sys
+
+
+def print_python_version():  # [missing-function-docstring]
+    print(sys.version)
+Try:
+
+import sys
+
+
+def print_python_version():
+    """Function printing python version."""
+    print(sys.version)
+icon for Python track
+Our Python Analyzer generated this feedback when analyzing your solution.
